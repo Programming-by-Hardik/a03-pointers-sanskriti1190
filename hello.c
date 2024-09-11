@@ -46,37 +46,36 @@ int main() {
 void swap(int *a, int *b) {
     //Write the function description
 
-
-
-
-
-
+int temp = *a;
+    *a = *b;
+    *b = temp;
 
 }
 
 // Function to find the maximum value in an array using pointers
 int findMax(int *arr, int length) {
     //Write the fucntion description 
-
-
-
-
-
-
-
-  
+ int max = *arr;
+    for (int i = 1; i < length; i++) {
+        if (*(arr + i) > max) {
+            max = *(arr + i);
+        }
+    }
+    return max;
+ 
 }
 
 // Function to reverse an array using pointers
 void reverseArray(int *arr, int length) {
     //Write the function description 
-
-
-
-
-
-
-
+ int *start = arr;
+    int *end = arr + length - 1;
+    while (start < end) {
+        int temp = *start;
+        *start = *end;
+        *end = temp;
+        start++;
+        end--;
 }
 
 //---------------------------------
